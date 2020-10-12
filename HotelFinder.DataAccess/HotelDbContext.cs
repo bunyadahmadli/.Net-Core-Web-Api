@@ -11,7 +11,7 @@ namespace HotelFinder.DataAccess
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("Server=DESKTOP-M28HTI4; Database=HotelDb;uis=sa;pwd=0056880b;");
+            optionsBuilder.UseSqlServer("Server=DESKTOP-M28HTI4; Database=HotelDb;uid=sa;pwd=0056880b;");
         }
         public DbSet<Hotel> Hotels { get; set; }
     }
