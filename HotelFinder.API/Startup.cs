@@ -11,6 +11,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using NSwag;
 
 namespace HotelFinder.API
 {
@@ -23,7 +24,21 @@ namespace HotelFinder.API
             services.AddControllers();
             services.AddSingleton<IHotelService, HotelManager>();
             services.AddSingleton<IHotelRepository,HotelRepository>();
-            services.AddSwaggerDocument();
+            services.AddSwaggerDocument(config=>
+            {
+                config.PostProcess = (doc =>
+                {
+                    doc.Info.Title = "All Hotel Api";
+                    doc.Info.Version = "2.1.1";
+                    doc.Info.Contact = new OpenApiContact
+                    {
+                        Name = "Bunyad Ahmadli",
+                        Url = "https://github.com/bunyadahmadli/.Net-Core-Web-Api",
+                        Email = "bunyad.ahmadli@gmail.com"
+                    };
+
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

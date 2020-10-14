@@ -10,7 +10,8 @@ namespace HotelFinder.DataAccess.Abstract
        List<Hotel> GetAllHotels();
 
        Hotel GetHotelById(int id);
-       Hotel CreateHotel(Hotel hotel);
+       Hotel GetHotelByName(string name);
+        Hotel CreateHotel(Hotel hotel);
        Hotel UpdateHotel(Hotel hotel);
        void DeleteHotel(int id);
    }

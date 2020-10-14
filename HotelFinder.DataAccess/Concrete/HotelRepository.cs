@@ -8,7 +8,7 @@ using HotelFinder.Entities;
 namespace HotelFinder.DataAccess.Concrete
 {
    public class HotelRepository:IHotelRepository
-    {
+   {
         public List<Hotel> GetAllHotels()
         {
             using (var hotelDbContext =new HotelDbContext())
@@ -22,6 +22,14 @@ namespace HotelFinder.DataAccess.Concrete
             using (var hotelDbContext = new HotelDbContext())
             {
                 return hotelDbContext.Hotels.Find(id);
+            }
+        }
+
+        public Hotel GetHotelByName(string name)
+        {
+            using (var hotelDbContext = new HotelDbContext())
+            {
+                return hotelDbContext.Hotels.FirstOrDefault(x=>x.Name.ToLower()==name.ToLower());
             }
         }
 

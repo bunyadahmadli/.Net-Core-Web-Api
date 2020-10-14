@@ -76,3 +76,4 @@ C:\Users\bunyadahmadli\source\repos\HotelFinder\HotelFinder.API\bin\Debug\netcor
 C:\Users\bunyadahmadli\source\repos\HotelFinder\HotelFinder.API\obj\Debug\netcoreapp3.1\HotelFinder.API.csproj.CoreCompileInputs.cache
 C:\Users\bunyadahmadli\source\repos\HotelFinder\HotelFinder.API\obj\Debug\netcoreapp3.1\HotelFinder.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\bunyadahmadli\source\repos\HotelFinder\HotelFinder.API\obj\Debug\netcoreapp3.1\HotelFinder.API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\bunyadahmadli\source\repos\HotelFinder\HotelFinder.API\bin\Debug\netcoreapp3.1\HotelFinder.API.xml
