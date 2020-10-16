@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using HotelFinder.Business.Abstract;
 using HotelFinder.DataAccess.Abstract;
 using HotelFinder.Entities;
@@ -16,35 +17,35 @@ namespace HotelFinder.Business.Concrete
         }
 
 
-        public List<Hotel> GetAllHotels()
+        public async Task<List<Hotel>> GetAllHotels()
         {
-            return _hotelRepository.GetAllHotels();
+            return await _hotelRepository.GetAllHotels();
         }
 
-        public Hotel GetHotelById(int id)
+        public async Task<Hotel> GetHotelById(int id)
         {
-            if (id > 0) return _hotelRepository.GetHotelById(id);
+            if (id > 0) return await _hotelRepository.GetHotelById(id);
             throw new Exception("id can not be less than 1");
         }
 
-        public Hotel GetHotelByName(string name)
+        public async Task<Hotel> GetHotelByName(string name)
         {
-            return _hotelRepository.GetHotelByName(name);
+            return await _hotelRepository.GetHotelByName(name);
         }
 
-        public Hotel CreateHotel(Hotel hotel)
+        public async Task<Hotel> CreateHotel(Hotel hotel)
         {
-            return _hotelRepository.CreateHotel(hotel);
+            return await _hotelRepository.CreateHotel(hotel);
         }
 
-        public Hotel UpdateHotel(Hotel hotel)
+        public async Task<Hotel> UpdateHotel(Hotel hotel)
         {
-            return _hotelRepository.UpdateHotel(hotel);
+            return await _hotelRepository.UpdateHotel(hotel);
         }
 
-        public void DeleteHotel(int id)
+        public async Task DeleteHotel(int id)
         {
-            _hotelRepository.DeleteHotel(id);
+           await _hotelRepository.DeleteHotel(id);
         }
     }
 }
